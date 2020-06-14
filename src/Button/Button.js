@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { defaultTheme } from "../Theme/";
 
 const StyledButton = styled.button`
-  ${({ theme, color = "default" }) => `
+  ${({ theme, color = "default" }) => `  
   background-color: ${theme.button[color].background};
   color: ${theme.button[color].text};
   `}
@@ -15,6 +16,10 @@ const StyledButton = styled.button`
 
 const Button = ({ children, ...props }) => {
   return <StyledButton {...props}>{children}</StyledButton>;
+};
+
+Button.defaultProps = {
+  theme: defaultTheme,
 };
 
 export default Button;

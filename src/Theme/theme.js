@@ -2,7 +2,7 @@ const primary = "#19C3FC";
 const secondary = "#fff";
 const _default = "#9DA1A7";
 
-const defaultTheme = {
+const theme = {
   primary,
   secondary,
   default: _default,
@@ -22,4 +22,4 @@ const defaultTheme = {
   },
 };
 
-export default defaultTheme;
+export default theme;
