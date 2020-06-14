@@ -2,16 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  ${({ theme, color }) => `
-  background-color: ${
-    color ? (color.includes("#") ? color : theme[color]) : theme.default
-  };
-  color: white;
+  ${({ theme, color = "default" }) => `
+  background-color: ${theme.button[color].background};
+  color: ${theme.button[color].text};
   `}
-  padding: 6px 16px;
+  padding: 10px 16px;
   cursor: pointer;
   border: none;
   border-radius: 10px;
+  text-transform: uppercase;
 `;
 
 const Button = ({ children, ...props }) => {
