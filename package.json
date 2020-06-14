@@ -5,6 +5,10 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/xavitb3/bluejay-ui.git"
+  },
   "scripts": {
     "build": "npm run build:lib && npm run build:esm",
     "build:lib": "babel src --out-dir lib --ignore src/__tests__/",
