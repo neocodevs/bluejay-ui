@@ -23,11 +23,11 @@ const Label = styled.label`
 `;
 
 const Input = (props) => {
-  const { id, label, showLabel = true, placeholder } = props;
+  const { id, label, showLabel = true } = props;
 
   return (
     <InputContainer>
-      {showLabel && <Label htmlFor={id}>{label}</Label>}
+      {showLabel && label && <Label htmlFor={id}>{label}</Label>}
       <StyledInput {...props} />
     </InputContainer>
   );
