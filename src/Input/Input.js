@@ -33,7 +33,7 @@ const Input = (props) => {
   );
 };
 
-Input.defaultProps = {
+StyledInput.defaultProps = {
   theme: defaultTheme,
 };
 
