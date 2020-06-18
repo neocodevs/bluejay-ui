@@ -1,6 +1,6 @@
 {
   "name": "bluejay-ui",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "lib/index.js",
   "author": "",
   "license": "ISC",
@@ -41,6 +41,8 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
     "styled-components": "^5.1.1"
   }
 }
