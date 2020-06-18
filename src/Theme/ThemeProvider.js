@@ -1,13 +1,13 @@
 import React from "react";
-import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import defaultTheme from "./theme";
 
-const ThemeProvider = ({ theme = defaultTheme, children }) => {
+const CustomThemeProvider = ({ theme = {}, children }) => {
   return (
-    <StyledComponentsThemeProvider theme={theme}>
+    <ThemeProvider theme={{ ...defaultTheme, ...theme }}>
       {children}
-    </StyledComponentsThemeProvider>
+    </ThemeProvider>
   );
 };
 
-export default ThemeProvider;
+export default CustomThemeProvider;
