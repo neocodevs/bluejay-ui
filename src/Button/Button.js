@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { defaultTheme } from "../Theme/";
+import Icon from "../Icons/index";
 
-const Button = styled.button`
+const StyledButton = styled.button`
   ${({ theme, color = "default" }) => `  
   background-color: ${theme.button[color].background};
   color: ${theme.button[color].text};
@@ -14,7 +15,40 @@ const Button = styled.button`
   text-transform: uppercase;
 `;
 
-Button.defaultProps = {
+const ContentWrapper = styled.span`
+  display: inherit;
+`;
+
+const getIconPosition = ({
+  icon,
+  children,
+  iconPosition = "start",
+  color,
+  props,
+}) => {
+  const IconStyled = () => <Icon src={icon} color={color} />;
+
+  return iconPosition === "start" ? (
+    <ContentWrapper>
+      <IconStyled /> {children}
+    </ContentWrapper>
+  ) : (
+    <ContentWrapper>
+      {children} <IconStyled />
+    </ContentWrapper>
+  );
+};
+
+const Button = (props) => {
+  const { icon, children } = props;
+  const buttonContent = icon
+    ? getIconPosition({ icon, children, ...props })
+    : children;
+
+  return <StyledButton {...props}>{buttonContent}</StyledButton>;
+};
+
+StyledButton.defaultProps = {
   theme: defaultTheme,
 };
 
