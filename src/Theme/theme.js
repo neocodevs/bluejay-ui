@@ -28,6 +28,7 @@ const theme = {
       text: _default,
     },
   },
+  borderRadius: 10
 };
 
 export default theme;

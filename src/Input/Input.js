@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { defaultTheme } from "../Theme/";
+import Label from "../Label";
 
 const InputContainer = styled.div`
   display: flex;
@@ -11,23 +12,17 @@ const StyledInput = styled.input`
   margin-bottom: 10px;
   padding: 10px 20px;
   border: 1px solid #9da1a7;
-  border-radius: 10px;
+  border-radius: ${({ theme }) => theme.borderRadius};
   color: #4b4b4b;
   background-color: transparent;
 `;
 
-const Label = styled.label`
-  color: #9da1a7;
-  font-size: 14px;
-  margin-bottom: 10px;
-`;
-
 const Input = (props) => {
-  const { id, label, showLabel = true } = props;
+  const { id, label, showLabel = true, Label: CustomLabel = Label } = props;
 
   return (
     <InputContainer>
-      {showLabel && label && <Label htmlFor={id}>{label}</Label>}
+      {showLabel && label && <CustomLabel htmlFor={id}>{label}</CustomLabel>}
       <StyledInput {...props} />
     </InputContainer>
   );
