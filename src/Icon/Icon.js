@@ -1,15 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import { defaultTheme } from "../Theme/";
+import { getColor } from "../utils/colors";
 
 const IconWrapper = styled.span`
   ${({ theme, color = "default" }) => `
   svg { 
-    fill: ${theme.button[color].text};
+    fill: ${getColor({
+      color,
+      fallback: theme[color],
+    })};
     width: 1em;
   }
   display: inherit;
-  margin: 0 5px;
+  margin: 0 16px;
   vertical-align: middle;
   `}
 `;
@@ -19,7 +23,7 @@ IconWrapper.defaultProps = {
 };
 
 const Icon = (props) => {
-  const { src: InnerIcon, color } = props;
+  const { iconSrc: InnerIcon, color } = props;
   return (
     <IconWrapper color={color} {...props}>
       <InnerIcon />

@@ -1,7 +1,10 @@
 import React from "react";
-import Icon from "../Icons/index";
+import Sidebar from "./Sidebar";
+import List from "../List/List";
+import ListItem from "../ListItem/ListItem";
+import Icon from "../Icon";
 
-export default { title: "Icon" };
+export default { title: "Sidebar" };
 
 const AddFile = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
@@ -10,8 +13,21 @@ const AddFile = () => (
 );
 
 export const withText = () => (
-  <>
-    <Icon src={AddFile} />
-    <Icon src={AddFile} color="secondary" />
-  </>
+  <Sidebar>
+    <List>
+      {["CLIENTS", "Products", "Bills", "Budget"].map((text, key) => (
+        <ListItem color="secondary" key={key}>
+          {text}
+        </ListItem>
+      ))}
+    </List>
+    <hr />
+    <List>
+      {["CLIENTS", "Products", "Bills", "Budget"].map((text, key) => (
+        <ListItem color="secondary" key={key} icon={AddFile}>
+          {text}
+        </ListItem>
+      ))}
+    </List>
+  </Sidebar>
 );

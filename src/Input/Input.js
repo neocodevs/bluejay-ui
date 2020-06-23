@@ -15,6 +15,14 @@ const StyledInput = styled.input`
   border-radius: ${({ theme }) => theme.borderRadius};
   color: #4b4b4b;
   background-color: transparent;
+  font-family: "Source Sans Pro";
+`;
+
+const Label = styled.label`
+  color: #9da1a7;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: "Source Sans Pro";
 `;
 
 const Input = (props) => {
