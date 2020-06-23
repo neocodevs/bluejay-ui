@@ -17,10 +17,14 @@ const buttonsColors = {
   },
 };
 
-const theme = {
+export const colors = {
   primary,
   secondary,
   default: _default,
+};
+
+const theme = {
+  ...colors,
   button: buttonsColors,
   link: {
     ...buttonsColors,
