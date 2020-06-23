@@ -1,7 +1,9 @@
 import React from "react";
-import Button from "./Button";
+import List from "./List";
+import ListItem from "../ListItem/ListItem";
+import Icon from "../Icon";
 
-export default { title: "Button" };
+export default { title: "List" };
 
 const AddFile = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
@@ -11,19 +13,18 @@ const AddFile = () => (
 
 export const withText = () => (
   <>
-    <Button color="primary">Primary</Button>
-    <Button color="secondary">Secondary</Button>
-    <Button>Default</Button>
+    <List>
+      {["CLIENTS", "Products", "Bills", "Budget"].map((text, key) => (
+        <ListItem key={key}>{text}</ListItem>
+      ))}
+    </List>
     <hr />
-    <Button color="primary" icon={AddFile}>
-      Primary with icon / icon position default
-    </Button>
-    <Button color="secondary" iconPosition="start" icon={AddFile}>
-      Secondary with icon / icon position start
-    </Button>
-    <Button icon={AddFile} iconPosition="end">
-      Default with icon / icon position end
-    </Button>
-    <hr />
+    <List>
+      {["CLIENTS", "Products", "Bills", "Budget"].map((text, key) => (
+        <ListItem key={key}>
+          <Icon iconSrc={AddFile} /> {text}
+        </ListItem>
+      ))}
+    </List>
   </>
 );
