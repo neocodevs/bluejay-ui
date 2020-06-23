@@ -18,12 +18,7 @@ const StyledInput = styled.input`
   font-family: "Source Sans Pro";
 `;
 
-const Label = styled.label`
-  color: #9da1a7;
-  font-size: 14px;
-  margin-bottom: 10px;
-  font-family: "Source Sans Pro";
-`;
+
 
 const Input = (props) => {
   const { id, label, showLabel = true, Label: CustomLabel = Label } = props;

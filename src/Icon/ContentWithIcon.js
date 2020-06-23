@@ -1,6 +1,6 @@
 import React from "react";
 import { getColor } from "../utils/colors";
-import Icon from "../Icon";
+import Icon from "../Icon/Icon";
 import styled from "styled-components";
 import { defaultTheme } from "../Theme/";
 
