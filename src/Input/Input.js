@@ -18,8 +18,6 @@ const StyledInput = styled.input`
   font-family: "Source Sans Pro";
 `;
 
-
-
 const Input = (props) => {
   const { id, label, showLabel = true, Label: CustomLabel = Label } = props;
 
