@@ -3,4 +3,5 @@ export { default as Input } from "./Input";
 export { default as Label } from "./Label";
 export { default as Link } from "./Link";
 export { default as Text } from "./Text";
+export { default as Sidebar } from "./Sidebar";
 export { default as ThemeProvider } from "./Theme";

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { defaultTheme } from "../Theme/";
+import { getColor } from "../utils/colors";
 
 const StyledSidebar = styled.div`
   ${({ theme, color = "default", open }) => `  
-  background-color: ${theme.button[color].background}; 
+  background-color: ${theme.button[color].text}; 
   width: ${open ? "320px" : "73px"};
   `}
   padding: 10px;
@@ -15,7 +16,7 @@ const StyledSidebar = styled.div`
 
 const StyledIcon = styled.svg`
   ${({ theme, color = "default" }) => `  
-    fill: ${theme.button[color].text}; 
+    fill: ${getColor({ color, fallback: theme.button[color].background })}; 
   `}
   cursor: pointer;
 `;
@@ -26,10 +27,11 @@ const ToggleIcon = styled.span`
   top: 40px;
 `;
 
-const DefaultOpenIcon = () => (
+const DefaultOpenIcon = (props) => (
   <StyledIcon
     width="20"
     height="20"
+    {...props}
     viewBox="0 0 20 20"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -42,10 +44,11 @@ const DefaultOpenIcon = () => (
   </StyledIcon>
 );
 
-const DefaultCloseIcon = () => (
+const DefaultCloseIcon = (props) => (
   <StyledIcon
     width="25"
     height="20"
+    {...props}
     viewBox="0 0 25 20"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -68,19 +71,25 @@ const DefaultCloseIcon = () => (
   </StyledIcon>
 );
 
-const toggleIcon = (open) => {
-  return !open ? <DefaultCloseIcon /> : <DefaultOpenIcon />;
-};
-
 function Sidebar(props) {
-  const [open, setOpen] = useState(true);
-  const { children, permanent = false, visibleIcons = true } = props;
+  const {
+    children,
+    permanent = false,
+    defaultOpen = true,
+    buttonColor = "default",
+  } = props;
+
+  const [open, setOpen] = useState(defaultOpen);
 
   return (
     <StyledSidebar {...props} open={open}>
       {!permanent && (
         <ToggleIcon onClick={() => setOpen(!open)}>
-          {toggleIcon(open)}
+          {open ? (
+            <DefaultOpenIcon color={buttonColor} />
+          ) : (
+            <DefaultCloseIcon color={buttonColor} />
+          )}
         </ToggleIcon>
       )}
       {children}

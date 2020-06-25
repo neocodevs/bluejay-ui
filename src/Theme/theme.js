@@ -32,7 +32,7 @@ const theme = {
       text: _default,
     },
   },
-  borderRadius: 10
+  borderRadius: "10px",
 };
 
 export default theme;
