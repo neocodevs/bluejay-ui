@@ -6,12 +6,17 @@ import { getColor } from "../utils/colors";
 const StyledSidebar = styled.div`
   ${({ theme, color = "default", open }) => `  
   background-color: ${theme.button[color].text}; 
-  width: ${open ? "320px" : "73px"};
+  width: ${open ? "224px" : "73px"};
   `}
   padding: 10px;
   height: 100vh;
   position: relative;
+  overflow-x: hidden;
   transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+`;
+
+const Spacer = styled.div`
+  height: 64px;
 `;
 
 const StyledIcon = styled.svg`
@@ -83,6 +88,7 @@ function Sidebar(props) {
 
   return (
     <StyledSidebar {...props} open={open}>
+      <Spacer />
       {!permanent && (
         <ToggleIcon onClick={() => setOpen(!open)}>
           {open ? (

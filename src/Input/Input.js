@@ -15,7 +15,6 @@ const StyledInput = styled.input`
   border-radius: ${({ theme }) => theme.borderRadius};
   color: #4b4b4b;
   background-color: transparent;
-  font-family: "Source Sans Pro";
 `;
 
 const Input = (props) => {

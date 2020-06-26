@@ -2,7 +2,6 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import List from "../List/List";
 import ListItem from "../ListItem/ListItem";
-import Icon from "../Icon";
 
 export default { title: "Sidebar" };
 

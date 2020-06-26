@@ -10,11 +10,11 @@ const IconWrapper = styled.span`
       color,
       fallback: theme[color],
     })};
-    width: 1em;
+    width: 25px;
+    height: 25px;
   }
-  display: inherit;
+  
   margin: 0 16px;
-  vertical-align: middle;
   `}
 `;
 

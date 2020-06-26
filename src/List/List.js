@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { defaultTheme } from "../Theme/";
 import { getColor } from "../utils/colors";
@@ -12,7 +11,6 @@ const List = styled.ul`
 `}
   padding: 10px 0;
   list-style: none;
-  font-family: "Source Sans Pro";
 `;
 
 List.defaultProps = {

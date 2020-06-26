@@ -11,15 +11,18 @@ const StyledListItem = styled.li`
       fallback: theme[color],
     })}; 
   `}
-  font-family: "Source Sans Pro";
-  padding: 10px 16px;
+  padding: 10px;
   display: flex;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
 `;
 
 const CustomContentWithIcon = styled(ContentWithIcon)`
   span {
     min-width: 56px;
-    margin: 0 16px;
+    margin: 0 12px;
   }
 `;
 

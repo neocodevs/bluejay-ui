@@ -5,7 +5,8 @@ import styled from "styled-components";
 import { defaultTheme } from "../Theme/";
 
 const ContentWrapper = styled.span`
-  display: inherit;
+  display: flex;
+  align-items: center;
 `;
 
 const ContentWithIcon = ({

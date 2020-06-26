@@ -20,7 +20,6 @@ const StyledButton = styled.button`
   cursor: pointer;
   border: none;
   text-transform: uppercase;
-  font-family: "Source Sans Pro";
 `;
 
 const Button = (props) => {

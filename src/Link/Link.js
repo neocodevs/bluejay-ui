@@ -8,7 +8,6 @@ const StyledLink = styled.a`
   `}
   padding: 10px 16px;
   cursor: pointer;
-  font-family: "Source Sans Pro";
 `;
 
 const Link = React.forwardRef((props, ref) => (
