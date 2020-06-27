@@ -7,8 +7,8 @@ import { ContentWithIcon } from "../Icon";
 const StyledListItem = styled.li`
   ${({ theme, color = "default" }) => ` 
     color:  ${getColor({
+      theme,
       color,
-      fallback: theme[color],
     })}; 
   `}
   padding: 10px;

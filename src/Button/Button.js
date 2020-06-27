@@ -7,12 +7,14 @@ import { ContentWithIcon } from "../Icon";
 const StyledButton = styled.button`
   ${({ theme, color = "default" }) => `  
   background-color: ${getColor({
+    theme,
     color,
-    fallback: theme.button[color].background,
+    from: { element: "button", prop: "background" },
   })};
   color: ${getColor({
+    theme,
     color,
-    fallback: theme.button[color].text,
+    from: { element: "button", prop: "text" },
   })} ;
   border-radius: ${theme.borderRadius};
   `}
@@ -20,6 +22,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   border: none;
   text-transform: uppercase;
+  outline: none;
 `;
 
 const Button = (props) => {

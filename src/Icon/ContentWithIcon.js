@@ -24,7 +24,11 @@ const ContentWithIcon = ({
   const IconStyled = () => (
     <Icon
       iconSrc={icon}
-      color={getColor({ color, fallback: theme.button[color].text })}
+      color={getColor({
+        theme,
+        color,
+        from: { element: "button", prop: "text" },
+      })}
     />
   );
 

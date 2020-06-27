@@ -7,8 +7,8 @@ const IconWrapper = styled.span`
   ${({ theme, color = "default" }) => `
   svg { 
     fill: ${getColor({
+      theme,
       color,
-      fallback: theme[color],
     })};
     width: 25px;
     height: 25px;

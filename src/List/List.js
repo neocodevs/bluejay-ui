@@ -5,8 +5,8 @@ import { getColor } from "../utils/colors";
 const List = styled.ul`
   ${({ theme, color = "default" }) => ` 
   color:  ${getColor({
+    theme,
     color,
-    fallback: theme[color],
   })}; 
 `}
   padding: 10px 0;

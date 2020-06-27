@@ -21,7 +21,11 @@ const Spacer = styled.div`
 
 const StyledIcon = styled.svg`
   ${({ theme, color = "default" }) => `  
-    fill: ${getColor({ color, fallback: theme.button[color].background })}; 
+    fill: ${getColor({
+      theme,
+      color,
+      from: { element: "button", prop: "background" },
+    })}; 
   `}
   cursor: pointer;
 `;

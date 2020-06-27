@@ -12,7 +12,7 @@ const AddFile = () => (
 export const withText = () => (
   <>
     <Button color="primary">Primary</Button>
-    <Button color="secondary">Secondary</Button>
+    {/* <Button color="secondary">Secondary</Button>
     <Button>Default</Button>
     <hr />
     <Button color="primary" icon={AddFile}>
@@ -23,7 +23,7 @@ export const withText = () => (
     </Button>
     <Button icon={AddFile} iconPosition="end">
       Default with icon / icon position end
-    </Button>
+    </Button> */}
     <hr />
   </>
 );

@@ -26,8 +26,7 @@ const CheckboxInput = styled.input`
 `;
 
 const CheckboxSVG = styled.svg`
-  fill: ${({ theme, color }) =>
-    getColor({ color: color, fallback: theme[color] })};
+  fill: ${({ theme, color }) => getColor({ theme, color })};
   width: 1em;
   height: 1em;
   display: inline-block;
