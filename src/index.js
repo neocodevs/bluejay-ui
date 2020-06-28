@@ -1,5 +1,6 @@
 export { default as Button } from "./Button";
 export { default as Checkbox } from "./Checkbox";
+export { default as DatePicker } from "./DatePicker";
 export { default as Card } from "./Card";
 export { default as Input } from "./Input";
 export { default as Label } from "./Label";
@@ -11,3 +12,4 @@ export { default as Sidebar } from "./Sidebar";
 export { default as Tab } from "./Tab";
 export { default as Tabs } from "./Tabs";
 export { default as ThemeProvider } from "./Theme";
+export { default as TimePicker } from "./TimePicker";
