@@ -4,12 +4,14 @@ import { defaultTheme } from "../Theme/";
 import { getColor } from "../utils/colors";
 
 const StyledSidebar = styled.div`
+  display: flex;
+  flex-direction: column;
   ${({ theme, color = "default", open }) => `  
   background-color: ${theme.button[color].text}; 
   width: ${open ? "224px" : "73px"};
   `}
   padding: 10px;
-  height: 100vh;
+  height: calc(100vh - 20px);
   position: relative;
   overflow-x: hidden;
   transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
