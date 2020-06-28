@@ -1,5 +1,5 @@
 const primary = "#19C3FC";
-const secondary = "red";
+const secondary = "#fff";
 const _default = "#9DA1A7";
 
 const buttonsColors = {
