@@ -4,6 +4,7 @@ import { getColor } from "../utils/colors";
 
 const Card = styled.div`
   ${({ theme, color = "white" }) => `  
+  border-radius: ${theme.borderRadius};
   background-color: ${getColor({
     theme,
     color,
@@ -11,6 +12,7 @@ const Card = styled.div`
   })};
   `}
   padding: 10px 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 `;
 
 Card.defaultProps = {
