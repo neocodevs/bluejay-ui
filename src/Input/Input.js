@@ -11,10 +11,16 @@ const InputContainer = styled.div`
 const StyledInput = styled.input`
   margin-bottom: 10px;
   padding: 10px 20px;
-  border: 1px solid #9da1a7;
+  border: 1px solid ${({ theme }) => theme.default};
   border-radius: ${({ theme }) => theme.borderRadius};
+  border-color: red;
   color: #4b4b4b;
   background-color: transparent;
+  outline: none;
+
+  :focus {
+    border-color: ${({ theme }) => theme.primary};
+  }
 `;
 
 const Input = (props) => {
