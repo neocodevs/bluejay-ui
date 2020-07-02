@@ -17,6 +17,17 @@ const buttonsColors = {
   },
 };
 
+const paginationColors = {
+  active: {
+    background: primary,
+    text: secondary,
+  },
+  default: {
+    background: secondary,
+    text: _default,
+  },
+};
+
 export const colors = {
   primary,
   secondary,
@@ -26,6 +37,7 @@ export const colors = {
 const theme = {
   ...colors,
   button: buttonsColors,
+  pagination: paginationColors,
   link: {
     ...buttonsColors,
     default: {
