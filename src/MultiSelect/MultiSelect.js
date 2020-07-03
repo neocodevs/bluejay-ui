@@ -1,8 +1,6 @@
 import React from "react";
-import Select from "react-select";
 import CreatableSelect from "react-select/creatable";
 import styled from "styled-components";
-import { defaultTheme } from "../Theme/";
 import Label from "../Label";
 
 const InputContainer = styled.div`
