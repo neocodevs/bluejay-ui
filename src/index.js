@@ -17,4 +17,6 @@ export { Pagination, PaginationItem } from "./Pagination";
 export { default as Tabs } from "./Tabs";
 export { default as ThemeProvider } from "./Theme";
 export { default as TimePicker } from "./TimePicker";
+export { default as MultiSelect } from "./MultiSelect";
+export { default as TextArea } from "./TextArea";
 export { default as responsive } from "./utils/responsive";
