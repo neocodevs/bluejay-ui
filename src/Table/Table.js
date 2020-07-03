@@ -45,6 +45,8 @@ export const StyledTr = styled.tr``;
 const Table = ({
   headers = [],
   onHeaderClick = () => {},
+  renderCustomHeader = () => {},
+  renderCustomCell = () => {},
   data = [],
   emptyTableText = "No hay resultados",
   Thead: CustomThead = StyledThead,
@@ -62,6 +64,7 @@ const Table = ({
               {header.name}
             </CustomTh>
           ))}
+          <CustomTh>{renderCustomHeader()}</CustomTh>
         </tr>
       </CustomThead>
       <tbody>
@@ -71,6 +74,7 @@ const Table = ({
               {headers.map((header, key) => (
                 <CustomTd key={key}> {dataRow[header.property]}</CustomTd>
               ))}
+              <td>{renderCustomCell(dataRow, key)}</td>
             </CustomTr>
           ))
         ) : (

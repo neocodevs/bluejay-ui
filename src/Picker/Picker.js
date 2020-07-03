@@ -5,6 +5,9 @@ import useOnClickOutside from "../utils/hooks/useOnClickOutside";
 
 const Container = styled.div`
   position: relative;
+  *:focus {
+    outline: none;
+  }
 `;
 
 const PickerContainer = styled.div`
@@ -12,9 +15,9 @@ const PickerContainer = styled.div`
   top: 50px;
   display: flex;
   justify-content: center;
+  z-index: 50;
   background-color: white;
   box-shadow: 0 3px 11px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15);
-  z-index: 50;
 `;
 
 const Picker = ({
