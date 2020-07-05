@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import DayPicker from "react-day-picker";
 import { DateTime } from "luxon";
@@ -63,6 +63,7 @@ const DatePicker = ({ disabledDays, ...props }) => {
         onDayClick={onChange}
         modifiers={modifiers}
         disabledDays={disabledDays}
+        selectedDays={value}
       />
     </CustomPicker>
   );
